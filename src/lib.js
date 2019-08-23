@@ -35,23 +35,25 @@ let lib
  * @param {object} fields
  */
 async function start(fields) {
-  let client            = null;
-  let account           = null;
-  let transactionsList  = [];
+  let client = null
+  let account = null
+  let transactionsList = []
 
   log('info', 'Authenticating ...')
   try {
     client = await new n26(fields.login, fields.password)
-  } catch(err) {
+  } catch (err) {
     log('error', err)
-    throw new Error((err.status >= 500) ? errors.VENDOR_DOWN : errors.LOGIN_FAILED)
+    throw new Error(
+      err.status >= 500 ? errors.VENDOR_DOWN : errors.LOGIN_FAILED
+    )
   }
   log('info', 'Successfully logged in')
 
   try {
     account = await client.account()
     transactionsList = await client.transactions()
-  } catch {
+  } catch (err) {
     log('error', err)
     throw new Error(errors.VENDOR_DOWN)
   }
@@ -65,7 +67,10 @@ async function start(fields) {
   log('info', 'Categorize the list of transactions')
   const categorizedTransactions = await categorize(allOperations)
 
-  const { accounts: savedAccounts } = await reconciliator.save([bankAccount], categorizedTransactions)
+  const { accounts: savedAccounts } = await reconciliator.save(
+    [bankAccount],
+    categorizedTransactions
+  )
 
   log(
     'info',
@@ -219,7 +224,10 @@ function fetchBalances(accounts) {
 
   return Promise.all(
     accounts.map(async account => {
-      const history = await BalanceHistory.getByYearAndAccount(currentYear, account._id)
+      const history = await BalanceHistory.getByYearAndAccount(
+        currentYear,
+        account._id
+      )
       history.balances[todayAsString] = account.balance
 
       return history
@@ -235,7 +243,7 @@ function fetchBalances(accounts) {
  * @returns {Promise}
  */
 function saveBalances(balances) {
-  return updateOrCreate(balances,  BalanceHistory.doctype, ['_id'])
+  return updateOrCreate(balances, BalanceHistory.doctype, ['_id'])
 }
 
 // ===== Export ======
