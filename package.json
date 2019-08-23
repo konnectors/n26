@@ -1,16 +1,12 @@
 {
   "name": "cozy-konnector-N26",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/konnectors/n26.git"
   },
-  "keywords": [
-    "cozy cloud",
-    "konnector-bank",
-    "n26"
-  ],
+  "keywords": ["cozy cloud", "konnector-bank", "n26"],
   "author": "Simon Delberghe",
   "license": "AGPL-3.0",
   "main": "./src/index.js",
