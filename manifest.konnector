@@ -4,7 +4,7 @@
   "type": "konnector",
   "language": "node",
   "icon": "icon.png",
-  "slug": "N26",
+  "slug": "n26",
   "source": "git@github.com:konnectors/n26.git",
   "editor": "Orandin",
   "vendor_link": "https://n26.com",
