@@ -61,6 +61,13 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
+"@babel/runtime@7.5.5":
+  version "7.5.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.5.tgz#74fba56d35efbeca444091c7850ccd494fd2f132"
+  integrity sha512-28QvEGyQyNkB0/m2B4FU7IEZGK2NUrcMtT6BZEFALTguLk+AUT6ofsHtPk5QyjAdUkpMJ+/Em+quwz4HOt30AQ==
+  dependencies:
+    regenerator-runtime "^0.13.2"
+
 "@babel/template@^7.1.0":
   version "7.4.0"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.4.0.tgz#12474e9c077bae585c5d835a95c0b0b790c25c8b"
@@ -289,6 +296,11 @@ abbrev@1:
 acorn-jsx@^5.0.0:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.0.1.tgz#32a064fd925429216a09b141102bfdd185fae40e"
+
+acorn-jsx@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.0.2.tgz#84b68ea44b373c4f8686023a551f61a21b7c4a4f"
+  integrity sha512-tiNTrP1MP0QrChmD2DdupCr6HWSFeKVw5d/dHTu4Y7rkAkRhU/Dt7dphAfIUyxtHpl/eBVip5uTNSpQJHylpAw==
 
 acorn@^6.0.2, acorn@^6.0.7:
   version "6.1.1"
@@ -1144,6 +1156,22 @@ cozy-client@^6.58.0:
     sift "6.0.0"
     url-search-params-polyfill "^6.0.0"
 
+cozy-client@^6.58.1:
+  version "6.58.1"
+  resolved "https://registry.yarnpkg.com/cozy-client/-/cozy-client-6.58.1.tgz#8e0d4e2de5c3ead222ef48a7cd4bfb4c6cbca700"
+  integrity sha512-lpvkowxb7Xeu5k00awn0KzGJbShF9MWM40rcW+pqvyNftJDB8Qd8x5qAR3J8rnO3HLR2IsdsRsWgw2zZOqtVqw==
+  dependencies:
+    cozy-device-helper "1.7.3"
+    cozy-stack-client "^6.58.1"
+    lodash "4.17.14"
+    microee "0.0.6"
+    prop-types "15.6.2"
+    react-redux "5.0.7"
+    redux "3.7.2"
+    redux-thunk "2.3.0"
+    sift "6.0.0"
+    url-search-params-polyfill "^6.0.0"
+
 cozy-device-helper@1.7.3:
   version "1.7.3"
   resolved "https://registry.yarnpkg.com/cozy-device-helper/-/cozy-device-helper-1.7.3.tgz#9952004454e73ba2c340ca58717af065c6326984"
@@ -1158,6 +1186,18 @@ cozy-doctypes@^1.62.0:
   dependencies:
     "@babel/runtime" "7.3.1"
     cozy-logger "^1.5.0"
+    date-fns "1.30.1"
+    es6-promise-pool "2.5.0"
+    lodash "4.17.15"
+    prop-types "^15.7.2"
+
+cozy-doctypes@^1.63.2:
+  version "1.63.3"
+  resolved "https://registry.yarnpkg.com/cozy-doctypes/-/cozy-doctypes-1.63.3.tgz#206c5afcf904b119a499c4ba142f0b6d0f7c7157"
+  integrity sha512-lHlberOm4V/5lPysR1h9V2jEZRb4rThdkufG2pyS7foVY59AwFiFTyCeD+QohhktEhGYqBcqjJj6Utf0EH8sdg==
+  dependencies:
+    "@babel/runtime" "7.5.5"
+    cozy-logger "^1.5.1"
     date-fns "1.30.1"
     es6-promise-pool "2.5.0"
     lodash "4.17.15"
@@ -1182,7 +1222,35 @@ cozy-jobs-cli@1.9.13:
     replay "2.4.0"
     strip-json-comments "3.0.1"
 
-cozy-konnector-libs@4.22.1, cozy-konnector-libs@^4.22.1:
+cozy-konnector-libs@4.24.1:
+  version "4.24.1"
+  resolved "https://registry.yarnpkg.com/cozy-konnector-libs/-/cozy-konnector-libs-4.24.1.tgz#00b4ed8f0018af0e652b7273738a15a5f3bfa5f0"
+  integrity sha512-62uG/TxFq2h0ON5dXFuEpXbfIHt9VfVcMIDrClQYD4C/8t3cv4yWLDf4unU35r4UKZ8TiwCTNSteTJRM72QKJg==
+  dependencies:
+    bluebird "^3.5.5"
+    bluebird-retry "^0.11.0"
+    cheerio "^1.0.0-rc.3"
+    classificator "^0.3.3"
+    cozy-client "^6.58.1"
+    cozy-client-js "^0.16.4"
+    cozy-doctypes "^1.63.2"
+    cozy-logger "1.5.1"
+    date-fns "^1.30.1"
+    file-type "^12.2.0"
+    geco "^0.11.1"
+    lodash-id "^0.14.0"
+    lowdb "^1.0.0"
+    mime-types "^2.1.24"
+    pdfjs "^2.3.0"
+    pdfjs-dist "^2.1.266"
+    raven "^2.6.4"
+    raw-body "^2.4.1"
+    request "^2.88.0"
+    request-debug "^0.2.0"
+    request-promise "^4.2.4"
+    strip-json-comments "^3.0.1"
+
+cozy-konnector-libs@^4.22.1:
   version "4.22.1"
   resolved "https://registry.yarnpkg.com/cozy-konnector-libs/-/cozy-konnector-libs-4.22.1.tgz#f3ad315dad9b9d8442bbe9bad75ee5b7f691d008"
   integrity sha512-HUbAQZO39kgPzinU32vjnttSswbDHo0hnODIhLPB04UV+mPowoyCBPD3ocXehOv2e/gv4/MO+QhUiSGwVgcgbA==
@@ -1225,10 +1293,27 @@ cozy-logger@1.5.0, cozy-logger@^1.5.0:
     chalk "^2.4.2"
     json-stringify-safe "5.0.1"
 
+cozy-logger@1.5.1, cozy-logger@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/cozy-logger/-/cozy-logger-1.5.1.tgz#c0351ae5a51436fc9c4dc968be0aa959cd30aece"
+  integrity sha512-5XD0d7BXS6Y9BokIyaRUDM16h0OlnO+q9b7KliSi8pBMqgyQOQQr65yZB1tOaSqvGhc9afdFM9o/Kr4FmB03Fg==
+  dependencies:
+    chalk "^2.4.2"
+    json-stringify-safe "5.0.1"
+
 cozy-stack-client@^6.57.0:
   version "6.57.0"
   resolved "https://registry.yarnpkg.com/cozy-stack-client/-/cozy-stack-client-6.57.0.tgz#dc14a795ae403247e232c60d143ab199a123ff18"
   integrity sha512-mFELDIAd6Yb11inB0ZjBVd8xCQy1euPWf6qHi5A9qs2HMFmK4fkQgIQq2brZOqxfaCmBq/I1jP3OppKcM83K+A==
+  dependencies:
+    detect-node "2.0.4"
+    mime "2.4.0"
+    qs "6.7.0"
+
+cozy-stack-client@^6.58.1:
+  version "6.58.1"
+  resolved "https://registry.yarnpkg.com/cozy-stack-client/-/cozy-stack-client-6.58.1.tgz#c9f6dabf41172fadeb752b18a7582c68e51c53ce"
+  integrity sha512-xb86IwFm1AVr0PwYlalIgV0ydA96aCXWKVKj+me/THOMYOhPgVrFZcAcJA0Ab3rKzMlMRJ0l3QP8GfWg2kbKRg==
   dependencies:
     detect-node "2.0.4"
     mime "2.4.0"
@@ -1842,10 +1927,10 @@ eslint@5.15.1:
     table "^5.2.3"
     text-table "^0.2.0"
 
-eslint@6.2.1:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-6.2.1.tgz#66c2e4fe8b6356b9f01e828adc3ad04030122df1"
-  integrity sha512-ES7BzEzr0Q6m5TK9i+/iTpKjclXitOdDK4vT07OqbkBT2/VcN/gO9EL1C4HlK3TAOXYv2ItcmbVR9jO1MR0fJg==
+eslint@6.2.2:
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-6.2.2.tgz#03298280e7750d81fcd31431f3d333e43d93f24f"
+  integrity sha512-mf0elOkxHbdyGX1IJEUsNBzCDdyoUgljF3rRlgfyYh0pwGnreLc0jjD6ZuleOibjmnUWZLY2eXwSooeOgGJ2jw==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     ajv "^6.10.0"
@@ -1856,7 +1941,7 @@ eslint@6.2.1:
     eslint-scope "^5.0.0"
     eslint-utils "^1.4.2"
     eslint-visitor-keys "^1.1.0"
-    espree "^6.1.0"
+    espree "^6.1.1"
     esquery "^1.0.1"
     esutils "^2.0.2"
     file-entry-cache "^5.0.1"
@@ -1901,13 +1986,13 @@ espree@^5.0.1:
     acorn-jsx "^5.0.0"
     eslint-visitor-keys "^1.0.0"
 
-espree@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/espree/-/espree-6.1.0.tgz#a1e8aa65bf29a331d70351ed814a80e7534e0884"
-  integrity sha512-boA7CHRLlVWUSg3iL5Kmlt/xT3Q+sXnKoRYYzj1YeM10A76TEJBbotV5pKbnK42hEUIr121zTv+QLRM5LsCPXQ==
+espree@^6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/espree/-/espree-6.1.1.tgz#7f80e5f7257fc47db450022d723e356daeb1e5de"
+  integrity sha512-EYbr8XZUhWbYCqQRW0duU5LxzL5bETN6AjKBGy1302qqzPaCH10QbRg3Wvco79Z8x9WbiE8HYB4e75xl6qUYvQ==
   dependencies:
     acorn "^7.0.0"
-    acorn-jsx "^5.0.0"
+    acorn-jsx "^5.0.2"
     eslint-visitor-keys "^1.1.0"
 
 esprima@^4.0.0:
@@ -4420,7 +4505,7 @@ redux@3.7.2:
     loose-envify "^1.1.0"
     symbol-observable "^1.0.3"
 
-regenerator-runtime@0.13.3:
+regenerator-runtime@0.13.3, regenerator-runtime@^0.13.2:
   version "0.13.3"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.3.tgz#7cf6a77d8f5c6f60eb73c5fc1955b2ceb01e6bf5"
   integrity sha512-naKIZz2GQ8JWh///G7L3X6LaQUAMp2lvb1rvwwsURe/VXwD6VMfr+/1NuNw3ag8v2kY1aQ/go5SNn79O9JU7yw==
