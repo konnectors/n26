@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "cozy-konnector-libs": "5.12.1",
-    "moment": "2.29.4",
+    "moment": "2.30.1",
     "n26": "1.5.3"
   },
   "devDependencies": {
